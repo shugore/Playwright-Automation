@@ -1,0 +1,30 @@
+[{
+    
+    "DataNu":"FirstData",
+    "Name":"Emegerncy Contact 1",
+    "Relationship":"Brother",
+    "HomeMobnile":"12345",
+    "Mobile":"12345",
+    "Telephone":"12345"
+
+},
+
+{
+    "DataNu":"SecondData",
+    "Name":"Emegerncy Contact 2",
+    "Relationship":"Sister",
+    "HomeMobnile":"56789",
+    "Mobile":"56789",
+    "Telephone":"56789"
+},
+
+{
+    "DataNu":"ThirdData",
+    "Name":"Emegerncy Contact 3",
+    "Relationship":"Friend",
+    "HomeMobnile":"98756",
+    "Mobile":"36578",
+    "Telephone":"987123"
+}
+
+]

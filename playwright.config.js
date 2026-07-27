@@ -1,6 +1,5 @@
-// @ts-check
-import { defineConfig, devices } from '@playwright/test';
-import { trace } from 'node:console';
+
+const { defineConfig, devices } = require('@playwright/test');
 
 
 /**
@@ -9,18 +8,41 @@ import { trace } from 'node:console';
 const config = ({
   testDir: './tests',
   timeout: 40* 1000,
+  retries: 1,
   expect : {
-
- timeout: 40* 1000,
+  timeout: 20* 1000,
   },
   reporter:"html",
-  use: {
-   browserName : 'chromium',
-   headless: false,
-   screenshot:'on',
-   trace: 'retain-on-failure'
-  },
 
+  projects: [
+    {
+      name: "Chrome",
+      use:{
+        broserName : "chromium",
+        headless : false,
+        screenShot : 'on-failure',
+        video : "retain-on-failure",
+        trace : "retain-on-failure",
+        viewport: null,
+        launchOptions: {
+          args: ['--start-maximized'],
+          },
+      }
+    },
+
+     {
+      name: "Firefox",
+      use:{
+        broserName : "firefox",
+        headless : true,
+        screenShot : 'on-failure',
+        video : "retain-on-failure",
+        trace : "retain-on-failure",
+        viewport: { width: 1920, height: 1080 },
+      }
+    }
+  ],
+ 
 });
 
 module.exports  = config
