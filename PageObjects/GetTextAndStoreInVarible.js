@@ -14,7 +14,7 @@ class GetTextAndStoreInVariable{
     }
 
     async getPassword(){
-
+//added space
         const fulltext = await this.getTextForPassword.textContent();
         return fulltext.split(":")[1].trim();
     }
