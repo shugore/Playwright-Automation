@@ -7,7 +7,7 @@
 
     "regression-suite":"npx playwright test --project=Chrome",
 
-    "smoke-suite": "npx playwright test --grep=smoke --project=Chrome",
+    "smoke-suite": "npx playwright test --grep=smoke --project=Chrome --headless",
 
     "crossBrowser-suite": "npx playwright test"
   },
