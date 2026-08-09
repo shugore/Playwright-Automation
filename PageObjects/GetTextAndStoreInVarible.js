@@ -8,6 +8,7 @@ class GetTextAndStoreInVariable{
 
     async getUsername(){
 
+        
         const fulltext = await this.getTextForUsername.textContent();
         return fulltext.split(":")[1].trim();
     }
